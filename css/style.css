@@ -1788,6 +1788,7 @@ a {
 
 .guest__right-side {
     max-width: 350px;
+    width: 100%;
 }
 
 .guest__hero-name {
@@ -2464,8 +2465,8 @@ a {
 
 .store__stick {
     position: absolute;
-    left: 4px;
-    top: 11px;
+    left: -5px;
+    top: -10px;
     width: 25%;
 }
 
@@ -3107,6 +3108,7 @@ label {
 
     .guest__right-side {
         max-width: 40%;
+        width: 100%;
     }
 
     .swiper-button-prev, .swiper-rtl .swiper-button-next {
