@@ -159,7 +159,7 @@
                   <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg> 
               </button> 
-              <form action="https://jsonplaceholder.typicode.com/posts" method="POST">                     
+              <form action="https://jsonplaceholder.typicode.com/posts" method="POST" id="form-enter">                     
                 <input type="search" name="search" tabindex="-1" placeholder="Поиск по сайту">
                 <button class="header__top-search-btn btn" tabindex="-1" type="submit">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -168,6 +168,7 @@
                   </svg>  
                 </button>
               </form>
+              <script></script>
             </div>
             <button class="header__top-nav-btn-enter enter-basic" aria-label="Кнопка вход" data-enterbtn >Вход</button>         
           </div>
@@ -296,15 +297,57 @@
             <div class="enter__top">
               <h2 class="enter__title">Вход</h2>
               <p class="enter__description">Если у вас ещё нет аккаунта, <br> &nbsp;<a href="#" class="enter__link"> зарегестрируйтесь</a></p>
-                <form action="https://jsonplaceholder.typicode.com/posts" autocomplete="off" method="POST" id="form" class="enter__form">
-                <label class="enter__label" aria-label="Логин">
-                  <input class="enter__input" id="userlogin" name="userlogin" type="email" placeholder="Логин">
-                </label>
-                <label class="enter__label" aria-label="Пароль">
-                  <input class="enter__input" id="userPassword" name="userPassword" type="password" placeholder="Пароль">	
-                </label>          
-                <button class="enter__btn-order btn" type="submit">Войти</button>      
-              </form>
+                <form action="https://jsonplaceholder.typicode.com/posts" autocomplete="off" method="POST" id="formEnter" class="enter__form">
+                  <label class="enter__label" aria-label="Логин">
+                    <input class="enter__input" id="userlogin" name="userlogin" type="email" placeholder="Логин">
+                  </label>
+                  <label class="enter__label" aria-label="Пароль">
+                    <input class="enter__input" id="userPassword" name="userPassword" type="password" placeholder="Пароль">	
+                  </label>          
+                  <button class="enter__btn-order btn" type="submit">Войти</button>      
+                </form>
+              <script>
+                const validate = new JustValidate('#formEnter');
+
+                  validate
+                    .addField('#userlogin', [
+                      {
+                        rule: 'minLength',
+                        value: 3,
+                        errorMessage: 'Недостаточно символов в логине',
+                      },
+
+                      {
+                        rule: 'required', 
+                        errorMessage : 'Введите свой логин'
+                      },
+                      {
+                        rule: 'maxLength',
+                        value: 30,
+                      },
+                    ])
+
+                    validate
+                    .addField('#userPassword', [
+
+
+                      {
+                        rule: 'required', 
+                        errorMessage : 'Введите пароль'
+                      },      
+                      {
+                        rule: 'minLength',
+                        value: 3,
+                        errorMessage: 'Ошибка в пароле',
+                      },   
+                      
+                      {
+                        rule: 'maxLength',
+                        value: 15,
+                        errorMessage: 'Ошибка в пароле',
+                      }, 
+                    ]);
+              </script>
             </div>
             <div class="enter__bottom">
               <p class="enter__description">Войти с помощью:</p>
@@ -1625,9 +1668,8 @@
                 </div>
               </div>
               <div class="guest__tabs-item" data-target="2">
-                <img class="guest__hero-img" alt="фото гостя" src="img/guest/zaglushka.jpg">
-                <img class="guest__hero-img-m" alt="фото гостя" src="img/guest/zaglushka2.jpg">
-                <img class="guest__hero-img-m2" alt="фото гостя" src="img/guest/zaglushka3.jpg">   
+                <img class="guest__hero-img" alt="фото гостя" src="img/guest/zaglushka.jpg">       
+                <img class="guest__hero-img-m" alt="фото гостя" src="img/guest/zaglushka2.jpg">    
               </div>
             </div>
       
@@ -2069,7 +2111,7 @@
           <div class="us__input-list">
             <form action="https://jsonplaceholder.typicode.com/posts" autocomplete="off" method="POST" id="formInput" class="us__form">
               <label aria-label="Что скажете?">
-                <textarea class="textarea" id="text" name="text" placeholder="Что скажете?"></textarea>
+                <textarea class="textarea" id="textblock" name="text" placeholder="Что скажете?"></textarea>
               </label> 
               <div class="us__form-bottom">
                 <label aria-label="Имя">
@@ -2095,11 +2137,25 @@
                   borderColor: 'red'
                 }
               })
+              
+              validation.addField("#textblock", [
+                {
+                  rule: 'required', 
+                  errorMessage : 'Что скажете?'
+                },
+                {
+                  rule: 'minLength', 
+                  value: 7,
+                  errorMessage : 'Минимум 7 символов',
+                  errorMessage : 'Введите текст'
+                }
+              ])
+
   
               validation.addField("#username", [
                 {
                   rule: 'required', 
-                  errorMessage : 'Ошибка'
+                  errorMessage : 'Введите имя'
                 },
                 {
                   rule: 'minLength', 
@@ -2108,14 +2164,14 @@
                 }
               ])
   
-              .addField("#userEmail", [
+              validation.addField("#userEmail", [
                 {
                   rule: 'required' , 
-                  errorMessage : 'Ошибка'
+                  errorMessage : 'Введите почту'
                 },
                 {
                   rule: 'email' , 
-                  errorMessage : 'Ошибка в почте'
+                  errorMessage : 'Введите свою почту'
                 },
   
               ])

@@ -76,8 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let choices = new Choices(element, {
         searchEnabled: false,
         itemSelectText: '',
-        // removeItems: true,
-        // renderSelectedChoices: 'always',
     });
 
     };
@@ -138,12 +136,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     });
 
+    //     enterBody?.addEventListener('click', () => {
+    //     enterBlock?.classList.remove('enter--active');
+    // });
+
         enterClose?.addEventListener('click', () => {
         boder.classList.toggle('stop-scroll');
         enterBlock?.classList.remove('enter--active');
         enterBody.classList.remove('stop-scroll');
     
     });
+
+     
+
 
     let etherBtn = document?.querySelector('.header__why-btn ');
     let etherWhy = document?.querySelector('.header__why-ether');
