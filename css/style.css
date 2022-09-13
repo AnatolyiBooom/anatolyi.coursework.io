@@ -2821,10 +2821,6 @@ a {
     color: var(--color-white);
 }
 
-.input:focus-visible,
-.textarea:focus-visible {
-    display: none;
-}
 
 
 .just-validate-error-label {
