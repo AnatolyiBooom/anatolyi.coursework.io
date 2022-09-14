@@ -730,6 +730,7 @@ a {
 }
 
 .enter__input {
+    outline: none;
     padding: 25px 32px;
     max-width: 510px;
     width: 100%;
@@ -2737,6 +2738,7 @@ a {
 }
 
 .textarea {
+    outline: none;
     resize: none;
     padding: 30px 32px 77px 32px;
     margin-bottom: 24px;
@@ -2775,6 +2777,7 @@ a {
 }
 
 .input {
+    outline: none;
     padding: 23px 30px;
     max-width: 445px;
     width: 100%;
