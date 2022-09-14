@@ -307,7 +307,12 @@
                   <button class="enter__btn-order btn" type="submit">Войти</button>      
                 </form>
               <script>
-                const validate = new JustValidate('#formEnter');
+                  const validate = new JustValidate('#formEnter' ,{
+                errorLabelStyle: {
+                  color: '#FF6F6F',
+                  borderColor: 'red'
+                }
+              })
 
                   validate
                     .addField('#userlogin', [
