@@ -5314,6 +5314,7 @@ label {
     .textarea {
         padding: 14px 32px 93px 23px;
         border-radius: 21px;
+        outline: none;
     }
 
     .textarea::placeholder,
