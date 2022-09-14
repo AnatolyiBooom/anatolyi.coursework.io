@@ -730,7 +730,7 @@ a {
 }
 
 .enter__input {
-    outline: none;
+    outline: none !important;
     padding: 25px 32px;
     max-width: 510px;
     width: 100%;
@@ -2738,7 +2738,7 @@ a {
 }
 
 .textarea {
-    outline: none;
+    outline: none !important;
     resize: none;
     padding: 30px 32px 77px 32px;
     margin-bottom: 24px;
@@ -2777,7 +2777,7 @@ a {
 }
 
 .input {
-    outline: none;
+    outline: none !important;
     padding: 23px 30px;
     max-width: 445px;
     width: 100%;
@@ -4486,7 +4486,7 @@ label {
     }
 
     .enter__close-btn {
-        transform: scale(.8);
+        transform: scale(0.8);
         top: 15px;
         right: 15px;
     }
@@ -4494,6 +4494,7 @@ label {
     .enter__block {
         padding-left: 20px;
         padding-right: 20px;
+        padding-top: 50px;
     }
 
     .enter__description {
