@@ -4483,13 +4483,14 @@ label {
     }
 
     .enter__close-btn {
-        transform: scale(.5);
-        top: 0px;
-        right: 10px;
+        transform: scale(.8);
+        top: 15px;
+        right: 15px;
     }
 
     .enter__block {
-        padding: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .enter__description {
