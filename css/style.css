@@ -1790,6 +1790,7 @@ a {
 
 .guest__right-side {
     max-width: 350px;
+    width: 100%;
 }
 
 .guest__hero-name {
@@ -3496,6 +3497,7 @@ label {
         position: relative;
         max-width: 30.9%;
         top: -1px;
+        width: 100%;
     }
 
     .guest__hero-description {
