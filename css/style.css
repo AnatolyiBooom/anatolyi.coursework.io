@@ -3111,6 +3111,7 @@ label {
 
     .guest__right-side {
         max-width: 40%;
+        width: 100%;
     }
 
     .swiper-button-prev, .swiper-rtl .swiper-button-next {
@@ -3165,6 +3166,7 @@ label {
 
     .guest__right-side {
         max-width: 33%;
+        width: 100%;
     }
 
     .broadcast__card {
