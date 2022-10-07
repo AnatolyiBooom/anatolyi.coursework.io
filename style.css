@@ -3170,6 +3170,7 @@ label {
 
     .guest__right-side {
         max-width: 33%;
+        width: 100%;
     }
 
     .broadcast__card {
