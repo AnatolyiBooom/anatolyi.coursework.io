@@ -1794,6 +1794,11 @@ a {
     width: 100%;
 }
 
+.guest__right-side {
+    max-width: 350px;
+    width: 100%;
+}
+
 .guest__hero-name {
     margin-bottom: 8px;
     font-weight: 500;
